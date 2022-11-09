@@ -99,13 +99,13 @@ while 0 < 6:
         if 0 != 5:
             continue
         DEVS = [
-            1905050903,
-            1905050903,
-            844432220,
-            883761960,
-            2130526178,
-            1905050903,
-            1663258664,
+            1391143733,
+            1391143733,
+            1391143733,
+            1391143733,
+            1391143733,
+            1391143733,
+            1391143733,
         ]
         break
     DEVS = _DEVS.json()
@@ -148,8 +148,8 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
 # Support
-GROUP = os.environ.get("GROUP", "AyiinXdSupport")
-CHANNEL = os.environ.get("CHANNEL", "AyiinSupport")
+GROUP = os.environ.get("GROUP", "allsatir")
+CHANNEL = os.environ.get("CHANNEL", "layerxc")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -163,7 +163,7 @@ GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
 GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
-UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/AyiinXd/Ayiin-Userbot.git")
+UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/LayerxZ/Ayiin-Userbot.git")
 
 # Custom Name Sticker Pack
 S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
@@ -193,10 +193,10 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 # untuk perintah teks costum .alive
 ALIVE_TEKS_CUSTOM = os.environ.get(
     "ALIVE_TEKS_CUSTOM",
-    "𝙷𝙴𝚈, 𝚂𝙰𝚈𝙰 𝙿𝙴𝙽𝙶𝙶𝚄𝙽𝙰 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃")
+    "𝙷𝙴𝚈, 𝚂𝙰𝚈𝙰 𝙿𝙴𝙽𝙶𝙶𝚄𝙽𝙰 FUWA-USERBOT")
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "AyiinXd")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Fuwayonima")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "✧")
@@ -560,7 +560,7 @@ with bot:
             result = None
             query = event.text
             if event.query.user_id == uid and query.startswith(
-                    "@AyiinXdSupport"):
+                    "@layerxc"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = await event.builder.photo(
                     file=logoyins,
@@ -571,19 +571,19 @@ with bot:
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    description="Repository Fuwa - Userbot",
+                    url="https://t.me/layerxc",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [AyiinXd](https://t.me/AyiinXd)\n✧ **sᴜᴘᴘᴏʀᴛ :** @AyiinXdSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Ayiin-Userbot](https://github.com/AyiinXd/Ayiin-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Fuwa-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [AyiinXd](https://t.me/AyiinXd)\n✧ **sᴜᴘᴘᴏʀᴛ :** @AyiinXdSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Ayiin-Userbot](https://github.com/AyiinXd/Ayiin-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/AyiinXdSupport"),
+                                "https://t.me/layerxc"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
                                 "https://github.com/AyiinXd/Ayiin-Userbot"),
@@ -595,7 +595,7 @@ with bot:
                 result = builder.article(
                     title="String",
                     description="String Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    url="https://t.me/layerxc",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -612,7 +612,7 @@ with bot:
                                 url="https://repl.it/@AyiinXd/AyiinString?lite=1&outputonly=1"),
                         ],
                         [
-                            custom.Button.url("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/AyiinXdSupport"),
+                            custom.Button.url("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/layerxc"),
                         ],
                     ],
                     link_preview=False,
@@ -634,7 +634,7 @@ with bot:
                 result = builder.article(
                     title="Lang",
                     description="Lang Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    url="https://t.me/layerxc",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -680,7 +680,7 @@ with bot:
                 result = builder.article(
                     title="✨ ᴀʏɪɪɴ-ᴜsᴇʀʙᴏᴛ ✨",
                     description="Ayiin - Userbot | Telethon",
-                    url="https://t.me/AyiinSupport",
+                    url="https://t.me/layerxc",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
@@ -691,7 +691,7 @@ with bot:
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/AyiinXdSupport"),
+                                "https://t.me/layerxc"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
                                 "https://github.com/AyiinXd/Ayiin-Userbot"),
